@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Orbit
+    </title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="main.css">
+</head>
+<body>
+    <!-- Navigation Bar -->
+    <nav class="navbar">
+        <div class="nav-container">
+            <div class="logo">
+                <i class="fas fa-bullseye"></i>
+                <span>Orbit</span>
+            </div>
+            <div class="nav-links">
+                <button class="nav-btn active"><i class="fas fa-home"></i> Dashboard</button>
+                <a href="progress.html" class="nav-btn"><i class="fas fa-chart-line"></i> Progress</a>
+            </div>
+        </div>
+    </nav>
+
+    <div class="container">
+        <div class="goal-container">
+            <input type="text" id="main-goal" placeholder="What do you want to become?">
+            <p class="goal-instruction">Type your ultimate goal above. Make it big and inspiring!</p>
+        </div>
+        
+        <div class="dashboard">
+            <div class="card motivation-card">
+                <h2 class="card-title"><i class="fas fa-quote-left"></i> Daily Motivation</h2>
+                <div class="quote-container">
+                    <p id="quote-text">The secret of getting ahead is getting started.</p>
+                    <p id="quote-author">— Mark Twain</p>
+                </div>
+                <button id="new-quote" class="btn"><i class="fas fa-sync-alt"></i> New Quote</button>
+            </div>
+            
+            <div class="card timer-card">
+                <h2 class="card-title"><i class="fas fa-clock"></i> Focus Timer</h2>
+                <div id="timer-display">25:00</div>
+                <div class="timer-controls">
+                    <button id="start-timer" class="btn"><i class="fas fa-play"></i> Start</button>
+                    <button id="pause-timer" class="btn btn-warning"><i class="fas fa-pause"></i> Pause</button>
+                    <button id="reset-timer" class="btn btn-danger"><i class="fas fa-redo"></i> Reset</button>
+                </div>
+                <div class="timer-presets">
+                    <button class="timer-preset" data-minutes="25">Pomodoro</button>
+                    <button class="timer-preset" data-minutes="50">Deep Focus</button>
+                    <button class="timer-preset" data-minutes="10">Quick Break</button>
+                </div>
+            </div>
+            
+            <div class="card finance-card">
+                <h2 class="card-title"><i class="fas fa-money-bill-wave"></i> Financial Motivation</h2>
+                <div class="balance-container">
+                    <p>Your current balance:</p>
+                    <input type="text" id="bank-balance" placeholder="Enter your balance" value="$0.00">
+                    <div class="balance-display" id="balance-display">$0.00</div>
+                    <button id="update-balance" class="btn btn-success"><i class="fas fa-sync-alt"></i> Update Balance</button>
+                </div>
+            </div>
+            
+            <div class="card priorities-card">
+                <h2 class="card-title"><i class="fas fa-tasks"></i> Top Priorities</h2>
+                <div class="priority-container">
+                    <div class="priority-input-container">
+                        <input type="text" id="priority-input" placeholder="Add a new priority...">
+                        <button id="add-priority" class="btn"><i class="fas fa-plus"></i> Add</button>
+                    </div>
+                    <ul class="priority-list" id="priority-list">
+                        <!-- Priority items will be added here -->
+                    </ul>
+                </div>
+            </div>
+        </div>
+        
+        <div class="card notes-card">
+            <h2 class="card-title"><i class="fas fa-sticky-note"></i> Notes & Ideas</h2>
+            <div class="notes-container">
+                <textarea id="notes" placeholder="Jot down your ideas, plans, and reflections..."></textarea>
+            </div>
+        </div>
+        
+        <footer>
+            <p>Made with ❤️ By Hareram | Goal Achievement Dashboard </p>
+        </footer>
+    </div>
+
+    <script src="main.js"></script>
+</body>
+</html>
