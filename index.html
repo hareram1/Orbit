@@ -3,25 +3,27 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Orbit
-    </title>
+    <title>Orbit</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <link rel="stylesheet" href="main.css">
 </head>
 <body>
-    <!-- Navigation Bar -->
-    <nav class="navbar">
-        <div class="nav-container">
-            <div class="logo">
-                <i class="fas fa-bullseye"></i>
-                <span>Orbit</span>
-            </div>
-            <div class="nav-links">
-                <button class="nav-btn active"><i class="fas fa-home"></i> Dashboard</button>
-                <a href="progress.html" class="nav-btn"><i class="fas fa-chart-line"></i> Progress</a>
-            </div>
+    
+    <!-- Fixed Header/Navbar -->
+    <div class="header">
+        <div class="logo">
+            <i class="fas fa-bullseye"></i>
+            <span>Orbit</span>
         </div>
-    </nav>
+        <div class="header-buttons">
+            <a href="progress.html" class="btn btn-primary" target="_blank">
+                <i class="fas fa-tachometer-alt"></i> Progress
+            </a>
+            <a href="others.html" class="btn btn-secondary" target="_blank">
+                <i class="fas fa-dice"></i> Others
+            </a>
+        </div>
+    </div>
 
     <div class="container">
         <div class="goal-container">
@@ -29,16 +31,17 @@
             <p class="goal-instruction">Type your ultimate goal above. Make it big and inspiring!</p>
         </div>
         
-        <div class="dashboard">
-            <div class="card motivation-card">
-                <h2 class="card-title"><i class="fas fa-quote-left"></i> Daily Motivation</h2>
-                <div class="quote-container">
-                    <p id="quote-text">The secret of getting ahead is getting started.</p>
-                    <p id="quote-author">— Mark Twain</p>
-                </div>
-                <button id="new-quote" class="btn"><i class="fas fa-sync-alt"></i> New Quote</button>
+        <!-- Motivational Quote Section -->
+        <div class="quote-header">
+            <div class="quote-content">
+                <p id="quote-text">The secret of getting ahead is getting started.</p>
+                <p id="quote-author">— Mark Twain</p>
             </div>
-            
+            <button id="new-quote" class="btn"><i class="fas fa-sync-alt"></i> New Quote</button>
+        </div>
+        
+        <div class="dashboard">
+            <!-- Focus Timer Card -->
             <div class="card timer-card">
                 <h2 class="card-title"><i class="fas fa-clock"></i> Focus Timer</h2>
                 <div id="timer-display">25:00</div>
@@ -54,16 +57,18 @@
                 </div>
             </div>
             
+            <!-- Financial Motivation Card -->
             <div class="card finance-card">
                 <h2 class="card-title"><i class="fas fa-money-bill-wave"></i> Financial Motivation</h2>
                 <div class="balance-container">
                     <p>Your current balance:</p>
-                    <input type="text" id="bank-balance" placeholder="Enter your balance" value="$0.00">
-                    <div class="balance-display" id="balance-display">$0.00</div>
+                    <input type="text" id="bank-balance" placeholder="Enter your balance" value="₹0.00">
+                    <div class="balance-display" id="balance-display">₹0.00</div>
                     <button id="update-balance" class="btn btn-success"><i class="fas fa-sync-alt"></i> Update Balance</button>
                 </div>
             </div>
             
+            <!-- Top Priorities Card -->
             <div class="card priorities-card">
                 <h2 class="card-title"><i class="fas fa-tasks"></i> Top Priorities</h2>
                 <div class="priority-container">
@@ -78,6 +83,7 @@
             </div>
         </div>
         
+        <!-- Notes Card -->
         <div class="card notes-card">
             <h2 class="card-title"><i class="fas fa-sticky-note"></i> Notes & Ideas</h2>
             <div class="notes-container">
